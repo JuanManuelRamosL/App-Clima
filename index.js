@@ -10,6 +10,11 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 // Ruta principal
+
+app.get('/', (req, res) => {
+  res.send('Hola Mundo');
+});
+
 app.get('/city', async (req, res) => {
      const city = req.body;
   
